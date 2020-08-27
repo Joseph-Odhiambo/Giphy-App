@@ -1,0 +1,7 @@
+img {
+    box-shadow: 4px 8px 8px 4px grey;
+}
+img:hover {
+    box-shadow: 5px 15px 15px 5px grey;
+    transition-duration: 1s;
+}

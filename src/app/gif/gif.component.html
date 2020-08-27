@@ -1,1 +1,20 @@
-<p>gif works!</p>
+<div class="container">
+    <div id="search">
+      <app-search (emitSearch) = 'searchGif($event)'></app-search>
+    </div>
+    <div *ngIf="gifs">
+      <div class="card-columns" >
+        <div class="card hover" *ngFor="let gif of gifs" >
+          
+                <img src="{{gif.url}}" alt="" class="card-img" width="300px" height="200px">
+        </div>
+      </div>
+    </div>
+    <div *ngIf='!gifs'>
+        <p>You have not searched yet....</p>
+    </div>
+    <div  style="margin-left: 10%; margin-bottom: 40px; margin-top: 25px;">
+      <button class="btn btn-info" (click) = "searchGif(searchGif)">Load more..</button>
+    </div>  
+</div> 
+ 

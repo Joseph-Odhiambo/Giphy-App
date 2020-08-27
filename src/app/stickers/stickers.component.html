@@ -1,1 +1,19 @@
-<p>stickers works!</p>
+<div class="container">
+    <div id="search">
+      <app-search (emitSearch) = 'searchSticker($event)'></app-search>
+    </div>
+    <div *ngIf="sticker">
+        <div class="card-columns" >
+            <div class="card" *ngFor="let sticker of sticker" >
+              <img src="{{sticker.url}}" alt="" class="card-img">
+          </div>
+        </div>
+      </div>
+      <!-- if no sticker display -->
+      <div *ngIf='!sticker'>
+        <p>You have not searched yet....</p>
+      </div>  
+  </div>
+  <div class="container" style="margin-left: 10%; margin-bottom: 40px; margin-top: 25px;">
+    <button class="btn btn-info" (click) = "searchSticker(sticker)">Load more!</button>
+  </div>
