@@ -16,7 +16,7 @@ export class StickerServiceService {
       data:[];
     }
 
-    let searchEndpoint = "https://api.giphy.com/v1/stickers/search?api_key="+environment.apiKey;
+    let searchEndpoint = "https://api.giphy.com/v1/stickers/search?api_key=" + "y9dAHEzoetvTHRL1K2Teaujljwu7HzAn";
     let promise = new Promise ((resolve,reject)=>{
       this.http.get<Results>(searchEndpoint+"&q="+searchIt).toPromise().then(
         (results)=>{
